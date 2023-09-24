@@ -1,15 +1,24 @@
 import React from 'react'
-import EnlaceInicial from './components/enlaceInicial'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import EleccionServicio from './pages/EleccionServicio'
+import EleccionDiaHora from './pages/EleccionDiaHora'
+import CalendarioMes from './components/CalendarioMes'
+import CalendarioSemana from './components/CalendarioSemana'
 
 function App() {
 
   return (
     <>
-      <div className='containerApp'>
-        <h1 className='tituloh1'>TURNOS GO</h1>
-        <EnlaceInicial />
-        <EnlaceInicial />
-      </div>
+    <BrowserRouter>
+        <Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route exact path='/servicios' element={<EleccionServicio />} />
+            <Route exact path='/fecha' element={<EleccionDiaHora />} />
+            <Route exact path='/calendar' element={<CalendarioMes />} />
+            <Route exact path='/calendarweek' element={<CalendarioSemana />} />
+        </Routes>
+    </BrowserRouter>
     </>
   )
 }
