@@ -22,7 +22,7 @@ body {
 }
 
 50% {
-    opacity: 1;
+    opacity: 0.3;
 }
 }
 
@@ -34,7 +34,7 @@ from {
 }
 
 50% {
-    opacity: 1;
+    opacity: 0.5;
 }
 }
 
@@ -56,6 +56,12 @@ animation-fill-mode: both;
     align-items: center;
     justify-content: center;
     padding: 50px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.containerApp.salida{
+    opacity: 0;
 }
 
 .btn_gral{
@@ -280,4 +286,3 @@ transform: rotateY(180deg);
 .front, .back {
     backface-visibility: hidden;
 }
-
