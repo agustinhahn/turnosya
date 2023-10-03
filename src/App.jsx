@@ -5,6 +5,7 @@ import EleccionServicio from './pages/EleccionServicio'
 import EleccionDiaHora from './pages/EleccionDiaHora'
 import CalendarioMes from './components/CalendarioMes'
 import CalendarioSemana from './components/CalendarioSemana'
+import CalendarioFullCalendar from './components/CalendarioFullCalendar'
 import Context from './context/Context'
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
                 <Route exact path='/' element={<Home />} />
                 <Route exact path='/servicios' element={<EleccionServicio />} />
                 <Route exact path='/fecha' element={<EleccionDiaHora />} />
-                <Route exact path='/calendar' element={<CalendarioMes />} />
+                <Route exact path='/calendar' element={<CalendarioFullCalendar />} />
                 <Route exact path='/calendarweek' element={<CalendarioSemana />} />
               </Routes>
           </Context>

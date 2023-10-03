@@ -6,7 +6,7 @@ const CalendarioMes = () => {
             <div class="calendar">
                 <div class="front">
                     <div class="current-date">
-                        <h1>Friday 15th</h1>
+                        <h1>Friday 15th</h1> 
                         <h1>January 2016</h1>	
                     </div>
                     <div class="current-month">
