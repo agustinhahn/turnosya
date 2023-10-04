@@ -5,11 +5,15 @@ import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from "@fullcalendar/interaction" // needed for dayClick
 
 
-const CalendarioFullCalendar = () =>{
+
+const CalendarioFullCalendar = ({turnos}) => {
+    
+    console.log(turnos)
     return (
-        <div>
+        <div style={{margin:'100px'}}>
             <FullCalendar
                 plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+                dateClick={function(info){ alert('Date: ' + info.date)}}
                 initialView={"dayGridMonth"} //dayGridMonth , timeGridWeek, timeGridDay
                 // dateClick={this.handleDateClick}
                 headerToolbar={{
@@ -18,27 +22,13 @@ const CalendarioFullCalendar = () =>{
                     end: 'dayGridMonth, timeGridWeek, timeGridDay'
                 }}
                 height={'1000px'}
+                events={turnos}
+                eventBackgroundColor='yellow'
+                eventTextColor='black'
+                
             />
         </div>
     )
 }
 
 export default CalendarioFullCalendar
-
-
-// export default class DemoApp extends React.Component {
-
-//     render() {
-//         return (
-//             <FullCalendar
-//                 plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-//                 dateClick={this.handleDateClick}
-//             />
-//         )
-//     }
-
-//     handleDateClick = (arg) => { // bind with an arrow function
-//         alert(arg.dateStr)
-//     }
-
-// }

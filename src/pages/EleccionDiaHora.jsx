@@ -8,17 +8,16 @@ const EleccionDiaHora = () => {
     const [salida, setSalida] = useState(false);
     const history = useNavigate();
 
-    //ESPERANDO FINALIZAR CALENDARIO PARA APLICAR LOGICA
-    // const handleCambioDeRuta = (e) => {
-    //     e.preventDefault(); // Evitar la redirección predeterminada
-    //     setSalida(true);
+    const handleCambioDeRuta = (e) => {
+        e.preventDefault(); // Evitar la redirección predeterminada
+        setSalida(true);
 
-    //     setTimeout(() => {
-    //         setSalida(false);
-    //         // Después de completar la transición, redirigir a la nueva ruta
-    //         history('/fecha');
-    //     }, 1000); 
-    // };
+        setTimeout(() => {
+            setSalida(false);
+            // Después de completar la transición, redirigir a la nueva ruta
+            history('/calendarday');
+        }, 1000); 
+    };
 
     const handleVolver = (e) => {
         e.preventDefault(); // Evitar la redirección predeterminada
@@ -34,7 +33,9 @@ const EleccionDiaHora = () => {
     return (
         <div className={`containerApp ${salida ? 'salida' : ''}`}>
             <h1 className='animated zoomIn tituloh1'>FECHA Y HORA DEL TURNO</h1>
-            <BotonGral textoBoton="HOY" />
+            <Link to='/calendarday' onClick={handleCambioDeRuta}>
+                <BotonGral textoBoton="HOY" />
+            </Link>
             <BotonGral textoBoton="ESTA SEMANA" />
             <BotonGral textoBoton="ESTE MES" />
             <Link to='/' onClick={handleVolver}>

@@ -5,14 +5,14 @@ import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from "@fullcalendar/interaction" // needed for dayClick
 
 
-const CalendarioSemana = ({turnos}) => {
+const CalendarDay = ({turnos}) => {
     console.log("hola desde calendario")
     console.log(turnos)
     return (
         <div style={{margin:'100px'}}>
             <FullCalendar
                 plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-                initialView={"timeGridWeek"} //dayGridMonth , timeGridWeek, timeGridDay
+                initialView={"timeGridDay"} //dayGridMonth , timeGridWeek, timeGridDay
                 // dateClick={this.handleDateClick}
                 headerToolbar={{
                     start: 'today prev, next',
@@ -28,4 +28,4 @@ const CalendarioSemana = ({turnos}) => {
     )
 }
 
-export default CalendarioSemana
+export default CalendarDay
