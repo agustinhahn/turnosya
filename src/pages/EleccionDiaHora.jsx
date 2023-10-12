@@ -32,7 +32,7 @@ const EleccionDiaHora = () => {
 
     return (
         <div className={`containerApp ${salida ? 'salida' : ''}`}>
-            <h1 className='animated zoomIn tituloh1'>FECHA Y HORA DEL TURNO</h1>
+            <h1 className='animated zoomIn tituloh1'>FECHA Y HORA</h1>
             <Link to='/calendarday' onClick={handleCambioDeRuta}>
                 <BotonGral textoBoton="HOY" />
             </Link>

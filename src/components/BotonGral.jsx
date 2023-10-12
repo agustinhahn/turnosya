@@ -1,11 +1,12 @@
 import React from 'react'
 
-const BotonGral = ({textoBoton}) => {
+const BotonGral = ({textoBoton, precioServicio}) => {
 
     return (
         <div>
             <button className='animated zoomIn btn_gral'>
-                {textoBoton}
+                    {textoBoton}
+                    {precioServicio}
             </button>
         </div>
     )

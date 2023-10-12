@@ -1,6 +1,8 @@
 import {React, useState, useEffect} from 'react'
 import BotonGral from '../components/BotonGral'
 import {Link, useNavigate} from 'react-router-dom'
+import ContenedorInfo from '../components/ContenedorInfo'
+
 
 const EleccionServicio = () => {
 
@@ -32,15 +34,9 @@ const EleccionServicio = () => {
     return (
         <div className={`containerApp ${salida ? 'salida' : ''}`}>
             <h1 className='animated zoomIn tituloh1'>ELEGI TU SERVICIO</h1>
-            <Link to='/fecha' onClick={handleCambioDeRuta}>
-                <BotonGral textoBoton="MASAJE HAWAIANO" />
-            </Link>
-            <Link to='/fecha' onClick={handleCambioDeRuta}>
-                <BotonGral textoBoton="MASAJE RELAJANTE" />
-            </Link>
-            <Link to='/fecha' onClick={handleCambioDeRuta}>
-                <BotonGral textoBoton="MASAJE DESCONTRACTURANTE" />
-            </Link>
+            <ContenedorInfo textoBoton="HAWAIANO" precioServicio="$1100" />
+            <ContenedorInfo textoBoton="RELAJANTE" precioServicio="$2200" />
+            <ContenedorInfo textoBoton="DESCONTRACTURANTE" precioServicio="$1800" />
             <Link to='/' onClick={handleVolver}>
                 <BotonGral textoBoton="VOLVER" />
             </Link>
