@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { ContextApp } from '../context/Context';
 
-const BotonInfo = () => {
-    const [mostrarInfo, setMostrarInfo] = useState(false);
+const BotonInfo = ({id,info}) => {
+    const {mostrarInfo,setMostrarInfo} = useContext(ContextApp)
 
     const toggleInfo = () => {
-        setMostrarInfo(!mostrarInfo);
+        if (id === mostrarInfo) {
+            setMostrarInfo(null); // Cierra el componente si ya está abierto
+        } else {
+            setMostrarInfo(id); // Abre el componente con el ID específico
+        }
     };
 
     const cerrarInfo = () => {
@@ -13,15 +18,17 @@ const BotonInfo = () => {
 
     return (
         <div>
+            {mostrarInfo === id ? (
+                <div className="info-box">
+                    <button onClick={cerrarInfo} className="close-button">X</button>
+                    <p className='textInfo'>{info}</p>
+                </div>
+            )
+        : (
             <button onClick={toggleInfo} className='btnInfo'>
                 INFO
             </button>
-            {mostrarInfo && (
-                <div className="info-box">
-                    <button onClick={cerrarInfo} className="close-button">X</button>
-                    <p>Esta es la información que deseas mostrar.</p>
-                </div>
-            )}
+        )}
         </div>
     );
 }
