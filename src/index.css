@@ -192,3 +192,36 @@ transform: rotateY(180deg);
 .textInfo{
     font-size: 15px;
 }
+
+/*CONTENEDOR FECHAS*/
+
+.contfecha{
+    margin: 10px;
+    width: 200px;
+    font-size:18px;
+    background-color: #4E937A;;
+    opacity: 0.5;
+    border-radius: 20px;
+    border: none;
+    color:white;
+    transition: transform 0.5s;
+    transition: all 0.1s ease-in-out;
+    font-family: 'Gabarito', cursive;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contfecha:hover{
+    transform: scale(1.2); /*para definir tamaño*/
+    background-color: #3c705d;
+    font-weight: bold;
+}
+
+.containerFechas{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+}

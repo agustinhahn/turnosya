@@ -3,8 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import EleccionServicio from './pages/EleccionServicio'
 import Context from './context/Context'
-import EleccionFecha from './components/EleccionFecha'
-import EleccionFecha2 from './components/EleccionFecha2'
+import EleccionFechaDemo from './pages/EleccionFechaDemo'
 function App() {
 
   return (
@@ -14,8 +13,7 @@ function App() {
               <Routes>
                 <Route exact path='/' element={<Home />} />
                 <Route exact path='/servicios' element={<EleccionServicio />} />
-                <Route exact path='/fecha' element={<EleccionFecha />} />
-                <Route exact path='/fecha2' element={<EleccionFecha2 />} />
+                <Route exact path='/fecha3' element={<EleccionFechaDemo />} />
               </Routes>
           </Context>
       </BrowserRouter>
