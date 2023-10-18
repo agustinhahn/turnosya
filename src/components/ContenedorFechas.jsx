@@ -1,18 +1,18 @@
 import React from 'react'
 import ComponenteFecha from './ComponenteFecha'
 
-const ContenedorFechas = ({fechaDisponible}) => {
+const ContenedorFechas = ({horarios}) => {
 
 
     return (
         <>
-            {fechaDisponible.map((p)=> {
+            {horarios.map((p)=> {
                 return(
                     <>
                         <ComponenteFecha
                             key={p.id}
                             id={p.id}
-                            fecha={p.fecha}
+                            hora={p.hora}
                         />
                     </>
                 )

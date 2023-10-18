@@ -1,12 +1,11 @@
 import React from 'react'
 
-const ComponenteFecha = ({id,fecha}) => {
+const ComponenteFecha = ({id,hora}) => {
 
-    console.log("Hola desde componente fecha")
     return (
         <>          
             <div className= 'animated zoomIn contfecha'>
-                <p>{fecha}</p>
+                <p>{hora}hs</p>
             </div>
         </>
 )

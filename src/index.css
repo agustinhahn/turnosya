@@ -209,7 +209,7 @@ transform: rotateY(180deg);
     font-family: 'Gabarito', cursive;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
 }
 
