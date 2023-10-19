@@ -1,7 +1,6 @@
-import {React, useState, useEffect} from 'react'
-import BotonGral from '../components/BotonGral'
-import {Link, useNavigate, useParams} from 'react-router-dom'
-import ContenedorInfo from '../components/ContenedorInfo'
+import {React, useState} from 'react'
+import BotonGral from '../BotonGral'
+import {Link, useNavigate} from 'react-router-dom'
 import DistribucionDatos from './DistribucionDatos'
 
 

@@ -1,6 +1,7 @@
 import {React, useState, useEffect} from 'react'
-import BotonGral from '../components/BotonGral'
+import BotonGral from '../BotonGral'
 import {Link, useNavigate} from 'react-router-dom'
+import DistribucionDatosFecha from './DistribucionDatosFecha';
 
 const EleccionDiaHora = () => {
 
@@ -15,7 +16,7 @@ const EleccionDiaHora = () => {
         setTimeout(() => {
             setSalida(false);
             // Después de completar la transición, redirigir a la nueva ruta
-            history('/calendarday');
+            history('/elegfecha');
         }, 1000); 
     };
 
@@ -30,17 +31,36 @@ const EleccionDiaHora = () => {
         }, 1000); 
     };
 
+    const fechasDisponibles = [{
+        id: 1,
+        fecha: "HOY"
+    },
+    {
+        id:2,
+        fecha: "EN LA SEMANA"
+    },
+    {
+        id:3,
+        fecha: "EN EL MES"
+    }
+]
+
+
     return (
         <div className={`containerApp ${salida ? 'salida' : ''}`}>
             <h1 className='animated zoomIn tituloh1'>FECHA Y HORA</h1>
-            <Link to='/calendarday' onClick={handleCambioDeRuta}>
-                <BotonGral textoBoton="HOY" />
-            </Link>
-            <BotonGral textoBoton="ESTA SEMANA" />
-            <BotonGral textoBoton="ESTE MES" />
+            <DistribucionDatosFecha fechas = {fechasDisponibles} />
             <Link to='/' onClick={handleVolver}>
                 <BotonGral textoBoton="VOLVER" />
             </Link>
+            {/* <Link to='/' onClick={handleCambioDeRuta}>
+                <BotonGral textoBoton="HOY"/>
+            </Link>
+            <BotonGral textoBoton="EN LA SEMANA" />
+            <BotonGral textoBoton="EN EL MES" />
+            <Link to='/' onClick={handleVolver}>
+                <BotonGral textoBoton="VOLVER" />
+            </Link> */}
         </div>
     )
 }

@@ -1,9 +1,17 @@
 import {React, useState, useEffect} from 'react'
-import {Link, useNavigate, useParams} from 'react-router-dom'
-import BotonGral from '../components/BotonGral'
-import ContenedorFechas from '../components/ContenedorFechas';
+import {Link, useNavigate, useParams,useLocation} from 'react-router-dom'
+import BotonGral from '../BotonGral'
+import ContenedorFechas from './ContenedorFechas';
 
 const EleccionFechaDemo = () => {
+
+
+    const location = useLocation();
+    const {id} = location.state
+
+
+    console.log("Hola desde eleccionfechademo")
+    console.log(id)
 
     const [salida, setSalida] = useState(false);
     const history = useNavigate();
@@ -44,11 +52,6 @@ const EleccionFechaDemo = () => {
         horarios.push(horaObjetoJson)
     }
 
-
-
-
-
-
     /*PROCESO PARA SABER CUANTOS DIAS TIENE EL MES EN CURSO.*/
     const fechaMes = new Date() //aqui capturo fecha acual con toda la info
     fechaMes.setDate(1) //establezco que es el dia 1
@@ -79,6 +82,7 @@ const EleccionFechaDemo = () => {
         const fechaObjetoJson = JSON.parse(fechaObjeto)
         semana.push(fechaObjetoJson)
     }
+
 
     return (
         <div className='containerApp'>

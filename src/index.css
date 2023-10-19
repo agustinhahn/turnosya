@@ -123,6 +123,33 @@ transform: rotateY(180deg);
     letter-spacing: 5px;
 }
 
+/*CONTENEDOR FECHA*/
+
+.contBtnFecha{
+    margin: 10px;
+    width: 300PX;
+    font-size:18px;
+    background-color: #4E937A;;
+    opacity: 0.5;
+    border-radius: 20px;
+    border: none;
+    color:white;
+    transition: transform 0.5s;
+    transition: all 0.6s ease-in-out;
+    font-family: 'Gabarito', cursive;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contBtnFecha:hover{
+    transform: scale(1.2); /*para definir tamaño*/
+    background-color: #3c705d;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
 
 /*BOTON INFO*/
 

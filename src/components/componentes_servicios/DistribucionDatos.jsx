@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react';
-import ContenedorInfo from '../components/ContenedorInfo';
+import React from 'react';
+import ContenedorInfo from './ContenedorInfo';
 
 const DistribucionDatos = ({tiposdemasajes}) => {
 
